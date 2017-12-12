@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "outFile": "app.js",
+        "noEmitOnError": true,
+        "declaration": false,
+        "sourceMap": true,
+        "experimentalDecorators": true,
+        "watch": true
+    }
+}

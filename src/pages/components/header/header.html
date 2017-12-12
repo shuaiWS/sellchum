@@ -1,0 +1,20 @@
+<div class="index-header" style="background-image: none;">
+    <!--<img src="../../../img/enter-for.png" class="enter-for-img" d-if="!statistic.isHaveSale||minePage" d-on="click: goEntry($event)"
+    />
+    <img src="../../../img/my-sell.png" class="my-match-img" d-if="statistic.isHaveSale&&!minePage" d-on="click: goMine($event)"
+    />-->
+    <carousel-view item-data-source="{{banners}}" index="{{carouselIndex}}" two-way="index">
+        <a d-attr:href="$item.link || ''" style="display: block;width: 100%;height: 100%">
+    <img d-attr:src="$item.img" style="width:100%" />
+    </a>
+    </carousel-view>
+    <div class="point-list">
+        <div class="point" d-repeat="e,i in banners" d-class="{on: i == carouselIndex}"></div>
+    </div>
+</div>
+
+<div class="nums display-box-h" d-if="!minePage">
+    <div class="flex-one">已发布<br/><span class="count">{{statistic.releaseCount}}</span></div>
+    <div class="flex-one">投食人数<br/><span class="count">{{statistic.voteCount}}</span></div>
+    <div class="flex-one">访问量<br/><span class="count">{{statistic.visitCount}}</span></div>
+</div>

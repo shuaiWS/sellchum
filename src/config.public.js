@@ -1,0 +1,1 @@
+var HOST = 'http://m.pinzvip.cn/api/roommate';

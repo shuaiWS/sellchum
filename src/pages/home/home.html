@@ -1,0 +1,57 @@
+<div class="index-div display-box-v">
+    <!--点击关注弹出二维码-->
+    <div class="attention-div display-box-h" d-if="qrcodeVisibleByServer">
+        <div class="left flex-one">{{dispName}}</div>
+        <div class="right">
+            <div class="attention" d-on="click:showQR()">
+                关注
+            </div>
+        </div>
+
+    </div>
+    <div class="top flex-one" d-waterfall:001="{onScrollEnd: fetchNextPage, itemSpan: 10}" d-scroll-position:001>
+        <header-view src="pages/components/header/header.html"></header-view>
+
+        <div class="search display-box-h">
+            <div class="search-div">
+                <input type="text" class="search-text" placeholder="请输入姓名、学校、编号进行搜索" d-model="searchKeyword" />
+                <div class="home-close" d-show="searchKeyword" d-on="click: searchKeyword = ''">
+                    <img src="../../img/close.png" class="home-close-img"/>
+                </div>
+            </div>
+            <div class="flex-one search-btn">
+                <button class="search-button" d-on="click: search()">{{type == albumTypes.search ? '取消' : '搜索'}}</button>
+            </div>
+        </div>
+
+        <div class="index-btns display-box-h" d-if="type != albumTypes.search">
+            <!--<div class="flex-one rank-bg" d-on="click:goRankPage()">排行榜</div>-->
+            <div class="flex-one" d-if="schoolId && !channelType" d-class="{on: type == albumTypes.schoolYanZhi}" d-on="click: toggleAlbumType(albumTypes.schoolYanZhi)">本校颜值</div>
+            <div class="flex-one" d-class="{on: type == albumTypes.newest}" d-on="click: toggleAlbumType(albumTypes.newest)">全国最新</div>
+            <div class="flex-one" d-class="{on: type == albumTypes.yanZhi}" d-on="click: toggleAlbumType(albumTypes.yanZhi)">颜值排名</div>
+            <!--<div class="flex-one" d-class="{on: type == albumTypes.hotest}" d-on="click: toggleAlbumType(albumTypes.hotest)">男神女神</div>-->
+            <div class="flex-one" d-class="{on: type == albumTypes.myVoted}" d-on="click: toggleAlbumType(albumTypes.myVoted)">朕的后宫</div>
+        </div>
+        <div class="before-sell">
+            <a class="introduce" href="#/welfare">玩法说明</a>
+        </div>
+
+        <album-list src="pages/components/albumList/albumList.html" list="{{renderList}}" on-alert="alert($event.args[0])" on-alertmarkview="showMark($event.args[0])"></album-list>
+
+        <div class="no-result" d-if="!isFetching && (!renderList || !renderList.length)">暂无信息</div>
+        <div class="no-result" d-if="isFetching">努力加载中...</div>
+    </div>
+
+    <div class="refresh" d-on:click="refresh()"></div>
+    <div class="return-top" onclick="document.querySelector('.top').scrollTop = 0"></div>
+
+    <alert-mark-view src="pages/components/alertMark/alertMark.html"  visible="{{alertMarkVisible}}" markorderno="{{markOrderNo}}" on-toast="changeToastStatus($event.args[0])" on-alertmarkresult="doneMarkResult($event.args[0],$event.args[1])"
+                two-way="visible" ></alert-mark-view>
+
+    <alert-view src="pages/components/alert/alert.html" visible="{{alertVisible}}" title="{{alertTitle}}" content="{{alertContent}}"
+         two-way="visible"></alert-view>
+    <footer-view src="pages/components/footer/footer.html" selected="0"></footer-view>
+    <!--<alert-qrcode-view src="pages/components/alertQRcode/alertQRcode.html" visible="{{qrcodeVisible}}" two-way="visible"></alert-qrcode-view>-->
+    <alert-click-qrcode-view src="pages/components/alertClickQRcode/alertClickQRcode.html" visible="{{qrcodeVisible}}" two-way="visible"></alert-click-qrcode-view>
+    <toast-view src="pages/components/toast/toast.html" visible="{{toastVisible}}" two-way="visible"></toast-view>
+</div>

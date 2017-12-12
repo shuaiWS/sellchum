@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>不大不学</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/animate.css">
+    <link rel="stylesheet" href="./css/index.css">
+
+</head>
+
+<body>
+    <application d-index="/home">
+        <home-page d-route="/home/:type?" src="pages/home/home.html"></home-page>
+        <entry-page d-route="/entry" src="pages/entry/entry.html"></entry-page>
+        <details-page d-route="/detail/:id" src="pages/details/details.html"></details-page>
+        <welfare-page d-route="/welfare" src="pages/welfare/welfare.html"></welfare-page>
+        <mine-page d-route="/mine" src="pages/mine/mine.html"></mine-page>
+        <rank-page d-route="/rank" src="pages/rank/rank.html"></rank-page>
+        <exchange-money-page d-route="/excmoney" src="pages/exchangeMoney/exchangeMoney.html"></exchange-money-page>
+    </application>
+
+    <!-- inject:tpl:html -->
+    <!-- endinject -->
+
+    <!--build:js js/lib.js -->
+    <script src="../lib/drunk.js"></script>
+    <script src="../lib/application.js"></script>
+    <script src="../lib/cookies.js"></script>
+    <script src="../lib/drunk.waterfall.js"></script>
+    <script src="../lib/drunk.carousel.js"></script>
+    <!--/build-->
+
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+
+	<!--build:js config.public.js -->
+	<script src="config.test.js"></script>
+	<!--/build-->
+
+    <!--build:js js/app.js -->
+    <script src="app.js"></script>
+    <!--/build-->
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?9138d5215835d8e3dfd4a0d08435dd31";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+    <!-- Piwik -->
+    <!--
+    <script type="text/javascript">
+        var _paq = _paq || [];
+        _paq.push(["setDomains", ["*.m.pinzvip.cn"]]);
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        (function() {
+            var u="//piwik.jianpinvip.com/";
+            _paq.push(['setTrackerUrl', u+'piwik.php']);
+            _paq.push(['setSiteId', '3']);
+            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+            g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+        })();
+
+        window.addEventListener('hashchange', function () {
+            var page = location.pathname + location.hash;
+            // Track a page change
+            _paq.push(['setCustomUrl', page]);
+            _paq.push(['setDocumentTitle', document.title]);
+            _paq.push(['trackPageView']);
+        });
+    </script>
+    -->
+    <!--<noscript><p><img src="//piwik.jianpinvip.com/piwik.php?idsite=3" style="border:0;" alt="" /></p></noscript>-->
+    <!-- End Piwik Code -->
+</body>
+
+</html>

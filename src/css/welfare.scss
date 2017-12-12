@@ -1,0 +1,36 @@
+@charset "UTF-8";
+@import "function.scss";
+
+.welfare-div {
+  height: 100%;
+  font-size: px2rem(28);
+  .content {
+    p {
+      padding: px2rem(10) px2rem(50) px2rem(40);
+      line-height: px2rem(44);
+      font-size: px2rem(24);
+    }
+    .top-p {
+      padding-top: px2rem(40);
+    }
+    .end-p {
+      padding-bottom: px2rem(40);
+    }
+    .active-style {
+      background: url("../img/active-style.png") center center no-repeat;
+      background-size: px2rem(138) px2rem(31);
+      height: px2rem(80);
+    }
+    .active-award{
+      background: url("../img/active-award.png") center center no-repeat;
+      background-size: px2rem(138) px2rem(31);
+      height: px2rem(80);
+    }
+    .end-time {
+      background: url("../img/end-time.png") center center no-repeat;
+      background-size: px2rem(206) px2rem(34);
+      height: px2rem(80);
+    }
+
+  }
+}

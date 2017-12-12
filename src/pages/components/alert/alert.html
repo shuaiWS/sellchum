@@ -1,0 +1,9 @@
+<link rel="stylesheet" href="../../../css/alert.css" />
+<div class="pop-layer" d-show="visible" style="z-index: 2000;"></div>
+<div class="alert-tip slide-down" d-if="visible" d-action style="z-index: 2100;">
+    <h1 class="alert-title">{{title}}</h1>
+    <div class="alert-content">{{content}}</div>
+    <div class="alert-footer">
+        <button class="ok-btn" d-on="click: onButtonClicked()"></button>
+    </div>
+</div>

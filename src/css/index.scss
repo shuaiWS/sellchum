@@ -1,0 +1,190 @@
+@charset "UTF-8";
+@import "function.scss";
+
+.index-div {
+  height: 100%;
+  font-size: px2rem(28);
+  position: relative;
+  .before-sell {
+    text-align: right;
+    .introduce {
+      text-align: right;
+      display: inline-block;
+      padding: 0 px2rem(20) 0 px2rem(10);
+      line-height: px2rem(80);
+      color: $baseColor;
+      font-size: px2rem(24);
+      position: relative;
+      margin-right: px2rem(30);
+      &::before {
+        content: "";
+        display: inline-block;
+        width: px2rem(28);
+        height: px2rem(80);
+        position: absolute;
+        background: url("../img/wenhao.png") center center no-repeat;
+        background-size: px2rem(26) px2rem(26);
+        $Left: px2rem(30);
+        left: -$Left;
+        z-index: 20;
+      }
+      &::after {
+        content: ">";
+        display: inline-block;
+        text-align: right;
+        width: px2rem(20);
+        height: px2rem(80);
+        position: absolute;
+        //$Right: px2rem(20);
+        //right: -$Right;
+        right: 0;
+        z-index: 20;
+      }
+    }
+  }
+  .attention-div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: px2rem(80);
+    line-height: px2rem(80);
+    background: rgba(0, 0, 0, .6);
+    z-index: 1000;
+    .left {
+      color: #fff;
+      font-size: px2rem(24);
+      font-weight: bolder;
+      padding-left: px2rem(30);
+      text-align: left;
+    }
+    .right {
+      padding-right: px2rem(30);
+      .attention {
+        height: px2rem(50);
+        padding: 0 px2rem(30) 0 px2rem(60);
+        margin-top: px2rem(15);
+        line-height: px2rem(50);
+        border-radius: px2rem(25);
+        background: url("../img/attention.png") px2rem(20) center no-repeat #ff6688;
+        background-size: px2rem(26) px2rem(26);
+        font-size: px2rem(24);
+        color: #fff;
+      }
+    }
+  }
+  .works-num {
+    width: px2rem(750);
+    height: px2rem(80);
+    line-height: px2rem(80);
+    background: #eeeeee;
+    .num {
+      color: #ff9900;
+    }
+  }
+  .content {
+    width: 100%;
+    padding: px2rem(20) 0;
+    position: relative;
+    background: #eeeeee;
+    .scroller {
+      width: 100%;
+      position: relative;
+    }
+    .pic-can {
+      position: absolute;
+      width: px2rem(345);
+      display: inline-block;
+      //opacity: 0;
+      // transition: all .5s ease-in-out;
+      .pic-div {
+        position: relative;
+        width: px2rem(345);
+        font-size: 0;
+        .pic-img {
+          width: 100%;
+        }
+        .infor {
+          font-size: px2rem(26);
+          //height: px2rem(130);
+          padding: px2rem(18);
+          background: #fff;
+          .item{
+            margin-bottom: px2rem(14);
+            text-align: left;
+          }
+          .btns{
+            .wx-no{
+              width: px2rem(148);
+              height: px2rem(68);
+              background: url("../img/wx-index.png") center center no-repeat;
+              background-size: cover;
+            }
+            .dafen{
+              width: px2rem(148);
+              height: px2rem(68);
+              background: url("../img/dafen-index.png") center center no-repeat;
+              background-size: cover;
+            }
+            .dafen.off{
+              width: px2rem(148);
+              height: px2rem(68);
+              background: url("../img/detail-mark-off.png") center center no-repeat;
+              background-size: px2rem(148) px2rem(68);
+            }
+          }
+          //.piaoshu {
+          //  width: px2rem(140);
+          //  background: $baseColor1;
+          //  text-align: center;
+          //  color: #fff;
+          //  .piaoshu-num {
+          //    height: px2rem(70);
+          //    line-height: px2rem(64);
+          //    .num-div {
+          //      display: inline-block;
+          //      border-bottom: 1px solid #fc819c;
+          //      .num {
+          //        font-size: px2rem(24);
+          //        font-weight: bold;
+          //      }
+          //      .latiao {
+          //        font-size: px2rem(20);
+          //      }
+          //    }
+          //  }
+          //  .toupiao {
+          //    width: 100%;
+          //    height: px2rem(62);
+          //    background: $baseColor1;
+          //    line-height: px2rem(68);
+          //    font-weight: bold;
+          //    border: none;
+          //    outline: none;
+          //    margin: 0;
+          //    color: #fff;
+          //  }
+          //}
+        }
+        .order {
+          position: absolute;
+          top: px2rem(20);
+          $marginLeft: px2rem(6);
+          left: -$marginLeft;
+          font-size: px2rem(24);
+          width: px2rem(125);
+          height: px2rem(54);
+          line-height: px2rem(50);
+          background: url("../img/order-bg.png") center center no-repeat;
+          background-size: cover;
+          color: #fff;
+          font-weight: bold;
+        }
+      }
+    }
+    .no-result {
+      text-align: center;
+      padding-top: px2rem(100);
+      min-height: px2rem(500);
+    }
+  }
+}
