@@ -1,3 +1,3 @@
-var HOST = 'http://m-pre.pinzvip.cn/api/roommate';
+var HOST = '';
 
 drunk.config.debug = true;
