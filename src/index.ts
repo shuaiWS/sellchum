@@ -9,7 +9,7 @@ namespace RoommateApp {
 
     if (!token) {
         // 如果没有登录，先登录
-        location.replace(`http://m.pinzvip.cn/api/wx/auth/userinfo?redirect_url=${encodeURIComponent(location.href)}`);
+        location.replace(``);
     }
     else {
         drunk.config.prefix = 'd-';

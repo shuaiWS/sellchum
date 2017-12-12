@@ -21,7 +21,7 @@ namespace WeixinUtil {
         var currentUrl = url || location.href.split("#")[0];
 
         return ajax({
-            url: `http://m.pinzvip.cn/api/wx/jsapi/signature?url=${encodeURIComponent(currentUrl)}`,
+            url: ``,
             headers: { accept: 'application/json', },
             responseType: 'json'
         }).then((data: any) => {

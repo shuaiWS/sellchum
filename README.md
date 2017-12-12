@@ -1,5 +1,5 @@
 # sellchum
-不大不学 gulp + typescript
+gulp + typescript
 
 ```
 cd src
